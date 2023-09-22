@@ -1,0 +1,194 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3fced;
+    /* overflow: hidden;    Ensure no scrollbars  - do we want this? */
+}
+
+header {
+    /* background-color: rgba(255, 255, 255, 0.4); */
+    top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    padding-left: 40px;
+    background-color:#557A46;
+    z-index: 10;
+    align-items: center; /* vertical alignment */
+}
+/* to replace with a image as a logo */
+#logo {
+    color: #F2EE9D;
+    display: inline;
+    font-size: 30px;
+}
+nav {
+    display: inline-block;
+    box-sizing: border-box;
+    color: white;
+    font-weight: 600;
+    margin-right: 90px;
+}
+nav li {
+    display: inline-block;
+    font-size: 22px;
+    padding: 5px 26px;
+    box-sizing: border-box;
+	border: 3px solid rgba(255, 255, 255, 0.3);
+    margin-right: 20px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+nav li:hover {
+    color: #F2EE9D;
+    background-color: rgba(54, 46, 46, 0.2);
+}
+/* End of header */
+/* Now, banner image */
+.banner-container {
+    box-sizing: border-box;
+    display: block;
+    max-width: 100%;
+    max-height: 500px;
+    height: 100%;
+    margin-top: 30px;
+}
+.banner-container img {
+    /* display: block; */
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* image is scaled to cover the entire box while maintaining its aspect ratio. */
+    object-position: top; /* doesn't cut off top of image */
+    opacity: 0.8;
+    z-index: 0;
+    position: relative;
+}
+/* provides an overlay for the quote */
+.quote-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 140px;
+    display: block;
+    color: #F2EE9D;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 600px; /* Adjust the value to set the maximum width */
+    margin: 0 auto; /* Center the container */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add a text shadow to make it stand out */
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    padding: 20px 40px;
+    border-radius: 14px;
+}
+.quote-container h3 {
+    font-weight: 400;
+    line-height: 1.7em;
+    font-size: 22px;
+}
+/* Title of page */
+.topic-title {
+    font-size: 40px;
+    text-align: center;
+}
+/* the whole section of teasers */
+.teasers-list {
+    display: block;
+    margin: 40px 30px 150px 30px;
+    padding-left: 0;
+}
+.teasers-list h4 {
+    font-size: 26px;
+}
+.teasers-list p {
+    font-size: 22px;
+    line-height: 1.7em;
+}
+.teasers-list img {
+    display: block;
+    height: 100%;
+    max-height: 400px;
+    box-sizing: border-box;
+	border: 3px solid #557a46;
+    border-radius: 15px;
+}
+/* view more button */
+.read-more {
+    font-size: 20px;
+    display: block;
+    margin: 40px 0px;
+    width: 100%;
+    max-width: 140px;
+    text-align: center;
+    padding: 8px 12px;
+    box-sizing: border-box;
+	border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #557A46
+}
+
+.read-more:hover {
+    background-color: rgba(242, 238, 157, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* one teaser container has an image + a teaser-text-container */
+.teaser-container {
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #a0bc82;
+    /* list-style-type: none; */
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Vertical centering */
+}
+.teaser-container:nth-child(2) {
+    background-color: #d1dec2;
+    flex-direction: row-reverse;
+}
+/* teaser-text-container has a tagline (h4) and a short description (p) */
+.teaser-text-container {
+    display: block;
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+    margin: 0px 50px;
+}
+
+.teaser-container:nth-child(2) .teaser-text-container {
+    text-align: right;
+}
+
+footer {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #557a46;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+footer p {
+    line-height: 1.4em;
+}
+.icon-style {
+    width: 100%;
+    max-width: 40px;
+    margin-right: 20px;
+}
