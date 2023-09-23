@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 body, html {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;;
     background-color: #f3fced;
     /* overflow: hidden;    Ensure no scrollbars  - do we want this? */
 }
-
 header {
     /* background-color: rgba(255, 255, 255, 0.4); */
     top: 0;
@@ -17,41 +18,49 @@ header {
     justify-content: space-between;
     position: fixed;
     padding-left: 40px;
-    background-color:#557A46;
+    /* background-color:#557A46; */
+    background-color: #f3fced;
     z-index: 10;
     align-items: center; /* vertical alignment */
 }
-/* to replace with a image as a logo */
-#logo {
-    color: #F2EE9D;
-    display: inline;
-    font-size: 30px;
+.logo {
+    margin-top: 16px;
+}
+.logo img {
+    box-sizing: content-box;
+    width: 100%;
+    width: 160px;
+    height: auto; /* TODO: cant get the height to = height of image */
+}
+.logo img:hover {
+    opacity: 80%;
 }
 nav {
     display: inline-block;
     box-sizing: border-box;
-    color: white;
-    font-weight: 600;
     margin-right: 90px;
 }
 nav li {
     display: inline-block;
-    font-size: 22px;
-    padding: 5px 26px;
-    box-sizing: border-box;
-	border: 3px solid rgba(255, 255, 255, 0.3);
     margin-right: 20px;
-    border-radius: 15px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.2);
 }
 a {
     text-decoration: none;
-    color: inherit;
 }
-nav li:hover {
+nav li a {
+    color:#226e7f;
+    font-weight: bolder;
+    font-size: 22px;
+    padding: 5px 26px;
+    box-sizing: border-box;
+	border: 3px solid rgb(195, 137, 21);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(254, 193, 87, 0.8);
+}
+nav li a:hover {
     color: #F2EE9D;
-    background-color: rgba(54, 46, 46, 0.2);
+    background-color: #557a46;
 }
 /* End of header */
 /* Now, banner image */
@@ -125,6 +134,7 @@ nav li:hover {
 /* view more button */
 .read-more {
     font-size: 20px;
+    font-weight: bold;
     display: block;
     margin: 40px 0px;
     width: 100%;
@@ -136,12 +146,13 @@ nav li:hover {
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #557A46
+    color: #226e7f;
 }
 
 .read-more:hover {
-    background-color: rgba(242, 238, 157, 0.6);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    color: #F2EE9D;
+    background-color: #557a46;
+    border: 3px solid rgb(195, 137, 21);
 }
 
 /* one teaser container has an image + a teaser-text-container */
@@ -178,7 +189,6 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: #557a46;
-    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -187,8 +197,77 @@ footer {
 footer p {
     line-height: 1.4em;
 }
-.icon-style {
+footer a {
+    color: white;
+}
+footer a:hover {
+    color: #fcb437;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Us page */
+#contact-page-title {
+    margin-top: 100px;
+}
+td, th {
+    border: none;
+}
+form {
+    display: block;
+    box-sizing: border-box;
     width: 100%;
-    max-width: 40px;
-    margin-right: 20px;
+    max-width: 700px;
+    margin-left: 100px;
+    margin-bottom: 140px;
+}
+table {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 650px;
+    display: block;
+    line-height: 1.8em;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: #d1dec2;
+}
+label {
+    font-size: 18px;
+}
+input[type="text"], textarea {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type="checkbox"] {
+    transform: scale(1.4);
+}
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #557a46;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+input[type="submit"]:hover {
+    background-color: #d38600;
+}
+.contact-info-container {
+    display: inline;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    position: absolute;
+    right: 50px;
+}
+.contact-info-container h5 {
+    font-size: 20px;
+}
+.contact-info-container p {
+    font-size: 18px;
+    line-height: 1.6em;
+    color: #226e7f;
 }
