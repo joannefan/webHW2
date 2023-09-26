@@ -2,117 +2,213 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>Kids Run The Kitchen</title>
+        <title>Kids Run The Kitchen Contact</title>
         <!-- is this the right place to put the following? -->
         <link rel="stylesheet" href="styles.css" />
-        <meta name="viewport" content="width=device-width", initial-scale=1” />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style type="text/css">
+            #contact-page-title {
+                margin-top: 100px;
+            }
+            form {
+                display: block;
+                box-sizing: border-box;
+                width: 90%;
+                max-width: 800px;
+                margin: 0 auto;
+                margin-bottom: 40px;
+            }
+            table {
+                box-sizing: border-box;
+                padding: 20px;
+                display: block;
+                line-height: 1.8em;
+                border-radius: 5px;
+                border-color: rgba(0, 0, 0, 0);
+                background-color: #d1dec2;
+            }
+            td, th {
+                border: none;
+            }
+            label {
+                font-size: 18px;
+            }
+            input[type="text"], textarea {
+                font-size: 18px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            input[type="checkbox"] {
+                transform: scale(1.4);
+            }
+            input[type="submit"] {
+                padding: 10px 20px;
+                font-size: 20px;
+                background-color: #557a46;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                box-sizing: border-box;
+                font-weight: 500;
+            }
+            input[type="submit"]:hover {
+                background-color: #d38600;
+            }
+            .contact-info-container {
+                box-sizing: border-box;
+                display: block;
+                width: 100%;
+                max-width: 800px;
+                margin: 0 auto;
+                padding-left: 20px;
+                padding-bottom: 20px;
+                text-align: center;
+            }
+            .contact-column {
+                display: inline-block;
+                text-align: left;
+                width: 100%;
+                max-width: 280px;
+            }
+            .contact-info-container h5 {
+                font-size: 20px;
+            }
+            .contact-info-container p {
+                font-size: 18px;
+                line-height: 1.6em;
+                color: #226e7f;
+            }
+            @media screen and (max-width: 600px) {
+                table {
+                    padding: 14px;
+                }
+                textarea {
+                    width: 100%;
+                }
+                .contact-info-container h5 {
+                    line-height: 0em;
+                }
+                label {
+                    font-size: 17px;
+                }
+            }
+        </style>
     </head>
     <body>
         <header>
             <a href="index.html" class="logo"><img src="logo.png" alt="Logo" /></a>
+            <!-- hamburger icon -->
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu">
+                <span class="hamb-lineA"></span>
+                <span class="hamb-lineB"></span>
+                <span class="hamb-lineC"></span>
+            </label>
             <!-- navigation menu bar -->
             <nav>
                 <ul>
                     <li><a href="index.html">About</a></li>
-                    <li><a href="#">Impact</a></li>
+                    <li><a href="impact.html">Impact</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <h2 class="topic-title" id="contact-page-title">Contact Us</h2>
+            <div class="contact-info-container">
+                <div class="contact-column">
+                    <h5>Phone:</h5>
+                    <p>(712) 352-1025</p><br />
+                </div>
+                <div class="contact-column">
+                    <h5>Address:</h5>
+                    <p>
+                        807 S Broad St #2 <br />
+                        Fremont, Nebraska (NE)<br />
+                        68025
+                    </p>
+                </div>
+            </div>
 
-        <div class="contact-info-container">
-            <h5>Phone:</h5>
-            <p>(712) 352-1025</p><br />
-            <h5>Address:</h5>
-            <p>
-                807 S Broad St #2 <br />
-                Fremont, Nebraska (NE)<br />
-                68025
-            </p>
-        </div>
-
-        <form action="#" method="get">
-            <table border="1" cellpadding="4" cellspacing="5">
-                <tr>
-                    <td><label>First Name:</label></td>
-                    <td><input type="text" name="firstname"></td>
-                </tr>
-                <tr>
-                    <td><label>Last Name:</label></td>
-                    <td><input type="text" name="lastname"></td>
-                </tr>
-                <tr>
-                    <td><label>Email:</label></td>
-                    <td><input type="text" name="email"></td>
-                </tr>
-                <tr>
-                    <td><label>Role:</label></td>
-                    <td>
-                        <label for="check-teacher">
-                            <input type="checkbox" name="chkTeacher" value="teacher" id="check-teacher"> Teacher<br />
-                        </label>
-                        <label for="check-admin">
-                            <input type="checkbox" name="chkAdmin" value="admin" id="check-admin"> Administrator<br />
-                        </label>
-                        <label for="check-educator">
-                            <input type="checkbox" name="chkEducator" value="educator" id="check-educator"> Non-formal Educator<br />
-                        </label>
-                        <label for="check-parent">
-                            <input type="checkbox" name="chkParent" value="parent" id="check-parent"> Parent/Guardian<br />
-                        </label>
-                        <label for="check-org">
-                            <input type="checkbox" name="chkOrg" value="org" id="check-org"> Partner Organization<br />
-                        </label>
-                        <label for="check-supporter">
-                            <input type="checkbox" name="chkSupporter" value="supporter" id="check-supporter"> Supporter<br />
-                        </label>
-                        <label for="check-other">
-                            <input type="checkbox" name="chkOther" value="other" id="check-other"> Other<br />
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <th><label><em>If Applicable</em></label></th>
-                </tr>
-                <tr>
-                    <td><label>School Name:</label></td>
-                    <td><input type="text" name="school"></td>
-                </tr>
-                <tr>
-                    <td><label>City:</label></td>
-                    <td><input type="text" name="city"></td>
-                </tr>
-                <tr>
-                    <td><label>State/Province:</label></td>
-                    <td><input type="text" name="stateProv"></td>
-                </tr>
-                <tr>
-                    <td><label>Country:</label></td>
-                    <td><input type="text" name="country"></td>
-                </tr>
-                <tr>
-                    <td><label>Email Communications:</label></td>
-                    <td>
-                        <label for="check-news">
-                            <input type="checkbox" name="chkNews" value="newsletter" id="check-news"> Newsletter<br />
-                        </label>
-                        <label for="check-sponsor">
-                            <input type="checkbox" name="chksponsorNews" value="sponsorship" id="check-sponsor"> Sponsorship Opportunities<br />
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>Your Question/Comment: </label></td>
-                    <td><textarea id="message" name="message" rows="8" cols="40"></textarea></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="SUBMIT"></td>
-                </tr>
-            </table>
-        </form>
-
+            <form action="#" method="get">
+                <table border="1" cellpadding="4" cellspacing="5">
+                    <tr>
+                        <td><label>First Name:</label></td>
+                        <td><input type="text" name="firstname"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Last Name:</label></td>
+                        <td><input type="text" name="lastname"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email:</label></td>
+                        <td><input type="text" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Role:</label></td>
+                        <td>
+                            <label for="check-teacher">
+                                <input type="checkbox" name="chkTeacher" value="teacher" id="check-teacher"> Teacher<br />
+                            </label>
+                            <label for="check-admin">
+                                <input type="checkbox" name="chkAdmin" value="admin" id="check-admin"> Administrator<br />
+                            </label>
+                            <label for="check-educator">
+                                <input type="checkbox" name="chkEducator" value="educator" id="check-educator"> Non-formal Educator<br />
+                            </label>
+                            <label for="check-parent">
+                                <input type="checkbox" name="chkParent" value="parent" id="check-parent"> Parent/Guardian<br />
+                            </label>
+                            <label for="check-org">
+                                <input type="checkbox" name="chkOrg" value="org" id="check-org"> Partner Organization<br />
+                            </label>
+                            <label for="check-supporter">
+                                <input type="checkbox" name="chkSupporter" value="supporter" id="check-supporter"> Supporter<br />
+                            </label>
+                            <label for="check-other">
+                                <input type="checkbox" name="chkOther" value="other" id="check-other"> Other<br />
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label><em>If Applicable</em></label></th>
+                    </tr>
+                    <tr>
+                        <td><label>School Name:</label></td>
+                        <td><input type="text" name="school"></td>
+                    </tr>
+                    <tr>
+                        <td><label>City:</label></td>
+                        <td><input type="text" name="city"></td>
+                    </tr>
+                    <tr>
+                        <td><label>State/Province:</label></td>
+                        <td><input type="text" name="stateProv"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Country:</label></td>
+                        <td><input type="text" name="country"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email Communications:</label></td>
+                        <td>
+                            <label for="check-news">
+                                <input type="checkbox" name="chkNews" value="newsletter" id="check-news"> Newsletter<br />
+                            </label>
+                            <label for="check-sponsor">
+                                <input type="checkbox" name="chksponsorNews" value="sponsorship" id="check-sponsor"> Sponsorship Opportunities<br />
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Your Question/Comment: </label></td>
+                        <td><textarea id="message" name="message" rows="8" cols="40"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="SUBMIT"></td>
+                    </tr>
+                </table>
+            </form>
         <footer>
                 <a href="#" id="small-logo">KidsRunTheKitchen</a>
                 <p>
