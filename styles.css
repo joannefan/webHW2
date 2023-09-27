@@ -50,7 +50,7 @@ nav li {
 }
 nav li a {
     box-sizing: border-box;
-	border: 3px solid rgb(195, 137, 21);
+    border: 3px solid rgb(195, 137, 21);
     border-radius: 10px;
     padding: 5px 26px;
     background-color: rgba(254, 193, 87, 0.8);
@@ -130,7 +130,7 @@ nav li a:hover {
     height: 100%;
     max-height: 500px;
     box-sizing: border-box;
-	border: 3px solid #557a46;
+    border: 3px solid #557a46;
     border-radius: 15px;
 }
 
@@ -173,7 +173,7 @@ nav li a:hover {
     text-align: center;
     padding: 8px 12px;
     box-sizing: border-box;
-	border: 3px solid rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
