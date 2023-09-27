@@ -8,14 +8,19 @@
     </head>
     <body>
         <header>
-            <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo" /></a>
-            <!-- hamburger icon -->
-            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <!-- logo -->
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Logo" />
+            </a>
+            
+            <!-- hamburger menu icon for narrower screens -->
+            <input class="side-menu" type="checkbox" id="side-menu" />
             <label class="hamb" for="side-menu">
                 <span class="hamb-lineA"></span>
                 <span class="hamb-lineB"></span>
                 <span class="hamb-lineC"></span>
             </label>
+
             <!-- navigation menu bar -->
             <nav>
                 <ul>
@@ -25,44 +30,53 @@
                 </ul>
             </nav>
         </header>
+
+        <!-- home banner with a quote -->
         <div class="banner-container">
-            <img src="images/banner.jpeg" alt="Two children cooking"/>
+            <img src="images/banner.jpeg" alt="Two children cooking" />
             <div class="quote-container">
-                <h3>"Cooking isn't just about following a recipe.<br /> 
-                    It's a journey of creativity and empowerment. Here at KidsRunTheKitchen, we equip young chefs with the skills and confidence to innovate in the kitchen."</h3>
+                <h3>"Cooking isn't just about following a recipe. It's a journey of creativity and empowerment. At KidsRunTheKitchen, we equip young chefs with the skills and confidence to innovate in the kitchen."</h3>
                 <p><em>- Euna Choe, Founder</em></p>
             </div>
         </div>
-        <h2 class="topic-title">What We Do</h2>
-        <!-- rename better -->
+
+        <h2 class="topic-title">About Us</h2>
+        
+        <!-- main content: teasers or previews that highlight areas of info -->
         <ul class="previews-list">
+            <!-- each preview container holds an image and text -->
             <li class="preview-container">
-                <img src="images/mainpage_image1.jpeg" alt="A child rolling dough"/>
+                <img src="images/home_image1.jpeg" alt="Child rolling dough" />
                 <div class="preview-text-container">
                     <h4>Healthy bodies, healthy minds</h4>
                     <p>At KidsRunTheKitchen, we understand the fundamental link between a healthy body and a healthy mind in shaping a promising future. Our team is dedicated to creating a transformative environment where youth come together to embrace the joy of wholesome eating, cooking, and communal dining. We equip the next generation with the knowledge to make informed, conscious choices for a lifetime of health and vitality. Join us as we nurture the future, one healthy meal at a time.</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <a href="#">Read More</a>
                 </div>
             </li>
+
             <li class="preview-container">
-                <img src="images/mainpage_image2 Small.jpeg" alt="Grandma teaching a child to peel potatoes"/>
+                <img src="images/home_image2.jpeg" alt="Grandma teaching a child to peel potatoes" />
                 <div class="preview-text-container">
                     <h4>Kitchen-smart, food-smart</h4>
                     <p>We take great pride in empowering children with fundamental kitchen skills from start to finish: from proper storage practices, to safe food-handling techniques, to seamless cleanups &mdash; we've got it covered. Safety is our first and foremost priority, ensuring that every child can navigate the kitchen responsibly and confidently.</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <a href="#">Read More</a>
                 </div>
             </li>
+            
             <li class="preview-container">
-                <img src="images/mainpage_image3.jpeg" alt="Child smiling and holding homemade bread"/>
+                <img src="images/home_image3.jpeg" alt="Child smiling and holding homemade bread" />
                 <div class="preview-text-container">
                     <h4>Culinary Innovators</h4>
                     <p>We help kids to embrace the culinary world as a canvas for creativity and community contribution. Cooking isn't just about making meals. It's an art, an attitude of playful resourcefulness, and a lifestyle of experimentation. It's a way to give back to local communities. Join us on this exciting journey of culinary exploration and innovation!</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <a href="#">Read More</a>
                 </div>
             </li>
         </ul>
+
+        <!-- Footer at the bottom of the page. All links are meaningful 
+        except Support Us since there is no page for it -->
         <footer>
-            <a href="#" id="small-logo">KidsRunTheKitchen</a>
+            <a href="index.html">KidsRunTheKitchen</a>
             <p>
                 <a href="index.html">About</a><br />
                 <a href="impact.html">Impact</a>

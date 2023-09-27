@@ -5,17 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="styles.css" />
         <title>Kids Run The Kitchen Impact</title>
+
         <!-- Internal stylesheet -->
         <style type="text/css">
-            #impact-page-title {
-                margin-top: 90px;
+            .topic-title {
+                margin-top: 100px;
             }
             .previews-list img {
                 width: 100%;
                 max-width: 400px;
             }
-            /* Since the images are horizontally wide in this page, making text 
-            run out of page sooner, we apply some responsive changes earlier */
+
+            /* Since images are horizontally wider in this page, making text 
+            run out of space sooner, we apply some responsive changes earlier */
             @media screen and (min-width: 1000px) and (max-width: 1300px) {
                 .previews-list {
                     margin: 10px 10px 60px 10px;
@@ -25,21 +27,25 @@
                 }
                 .previews-list p {
                     font-size: 20px;
-                    line-height: 1.5em;
                 }
             }
         </style>
     </head>
     <body>
         <header>
-            <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo" /></a>
-            <!-- hamburger icon -->
-            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <!-- logo -->
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Logo" />
+            </a>
+            
+            <!-- hamburger menu icon for narrower screens -->
+            <input class="side-menu" type="checkbox" id="side-menu" />
             <label class="hamb" for="side-menu">
                 <span class="hamb-lineA"></span>
                 <span class="hamb-lineB"></span>
                 <span class="hamb-lineC"></span>
             </label>
+
             <!-- navigation menu bar -->
             <nav>
                 <ul>
@@ -50,36 +56,44 @@
             </nav>
         </header>
         
-        <h2 class="topic-title" id="impact-page-title">What We've Done</h2>
-        <!-- rename better -->
+        <h2 class="topic-title">What We've Done</h2>
+
+        <!-- main content: teasers or previews of past events, accomplishments
+        that demonstrate the organization's impact -->
         <ul class="previews-list">
+            <!-- each preview container holds an image and text -->
             <li class="preview-container">
-                <img src="images/impact_img1.jpeg" alt="Farmer inspecting fruit"/>
+                <img src="images/impact_img1.jpeg" alt="Farmer inspecting fruit" />
                 <div class="preview-text-container">
                     <h4>Education</h4>
                     <p>For the past five years, every autumn, we've teamed up with local farmers for an epic farm adventure. Picture fields of veggies and fruit trees, helping kids grasp that food doesn't just fall from the sky—it's grown with care and hard work. During these visits, we've also had a blast decoding food labels and chatting about nutrition. Plus, there were a few "Aha!" moments that turned them into little health detectives in the grocery aisles.</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <a href="#">Read More</a>
                 </div>
             </li>
+
             <li class="preview-container">
-                <img src="images/impact_img2.jpeg" alt="Volunteer demonstrates how to make a dish to a family"/>
+                <img src="images/impact_img2.jpeg" alt="Volunteer demonstrates how to make a dish" />
                 <div class="preview-text-container">
                     <h4>Community</h4>
-                    <p>Every month, through the gracious support of our x and y, we host community cooking workshops. Picture a room buzzing with laughter and the smell of something delicious as kids, parents, and our rockstar volunteers all gather for a crash course in kitchen wizardry. Starting from the basics—learning how to wield a knife without any Harry Potter spells—we move on to creating taste explosions. It's all about laughter, learning, and a sprinkle of kitchen magic.</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <p>Every month, through the gracious support of our sponsors and volunteers, we host community cooking workshops. Picture a room buzzing with laughter and the smell of something delicious as kids, parents, and our rockstar volunteers all gather for a crash course in kitchen wizardry. Starting from the basics—learning how to wield a knife without any Harry Potter spells—we move on to creating taste explosions. It's all about laughter, learning, and a sprinkle of kitchen magic.</p>
+                    <a href="#">Read More</a>
                 </div>
             </li>
+
             <li class="preview-container">
-                <img src="images/impact_img3.jpeg" alt="Children in a food competition"/>
+                <img src="images/impact_img3.jpeg" alt="Children in a fun food competition" />
                 <div class="preview-text-container">
-                    <h4>Creativity</h4>
-                    <p>The real favorite has been our annual cook-athon and mashup! Teams of young chefs eagerly grab mystery baskets filled with surprise ingredients. It's like their own little cooking show, an opportunity to showcase all that they've learned. Parents cheer with delight as these mini-MasterChefs whip up dishes that not only tantalize taste buds but also showcase their ingenious and imaginative culinary creations.</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <h4>Innovation</h4>
+                    <p>The real favorite is our annual cook-athon and mashup! Teams of young chefs eagerly grab mystery baskets filled with surprise ingredients. It's like their own little cooking show, an opportunity to showcase all that they've learned. Parents cheer with delight as these mini-MasterChefs whip up dishes that not only tantalize taste buds but also showcase their ingenious and imaginative culinary creations.</p>
+                    <a href="#">Read More</a>
                 </div>
             </li>
         </ul>
+        
+        <!-- Footer at the bottom of the page. All links are meaningful 
+        except Support Us since there is no page for it -->
         <footer>
-            <a href="#" id="small-logo">KidsRunTheKitchen</a>
+            <a href="index.html">KidsRunTheKitchen</a>
             <p>
                 <a href="index.html">About</a><br />
                 <a href="impact.html">Impact</a>

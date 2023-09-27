@@ -7,34 +7,36 @@ body, html {
     padding: 0;
     font-family: 'Nunito', sans-serif;;
     background-color: #f3fced;
-    /* overflow: hidden;    Ensure no scrollbars  - do we want this? */
 }
+a {
+    text-decoration: none;
+}
+
+/* Styling for header, which includes the logo and nav bar */
 header {
-    /* background-color: rgba(255, 255, 255, 0.4); */
+    position: fixed;
     top: 0;
     width: 100%;
     height: 70px;
     display: flex;
     justify-content: space-between;
-    position: fixed;
     padding-left: 40px;
-    /* background-color:#557A46; */
     background-color: #f3fced;
     z-index: 10;
-    align-items: center; /* vertical alignment */
+    align-items: center; /* keeps items' heights aligned */
 }
+/* styling for logo */
 .logo {
     margin-top: 16px;
 }
 .logo img {
-    box-sizing: content-box;
-    width: 100%;
     width: 160px;
-    height: auto; /* TODO: cant get the height to = height of image */
+    height: auto; 
 }
 .logo img:hover {
     opacity: 80%;
 }
+/* styling for navigation bar */
 nav {
     display: inline-block;
     box-sizing: border-box;
@@ -45,26 +47,24 @@ nav li {
     display: inline-block;
     margin-right: 20px;
 }
-a {
-    text-decoration: none;
-}
 nav li a {
-    color:#226e7f;
-    font-weight: bolder;
-    font-size: 22px;
-    padding: 5px 26px;
     box-sizing: border-box;
 	border: 3px solid rgb(195, 137, 21);
     border-radius: 10px;
-    text-align: center;
+    padding: 5px 26px;
     background-color: rgba(254, 193, 87, 0.8);
+    text-align: center;
+    color:#226e7f;
+    font-weight: bolder;
+    font-size: 22px;
 }
 nav li a:hover {
     color: #F2EE9D;
     background-color: #557a46;
 }
-/* End of header */
-/* Now, banner image */
+
+/* Stylings that apply only to the home page */
+/* Here we style the banner right under the header in the home page */
 .banner-container {
     box-sizing: border-box;
     display: block;
@@ -74,31 +74,30 @@ nav li a:hover {
     margin-top: 50px;
 }
 .banner-container img {
-    /* display: block; */
+    position: relative;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* image is scaled to cover the entire box while maintaining its aspect ratio. */
-    object-position: top; /* doesn't cut off top of image */
+    object-fit: cover; /* image covers entire box while maintaining aspect ratio. */
+    object-position: top; 
     opacity: 0.8;
     z-index: 0;
-    position: relative;
 }
-/* provides an overlay for the quote */
+/* provides an overlay for the quote on top of the banner image */
 .quote-container {
+    display: block;
     position: absolute;
+    box-sizing: border-box;
     left: 0;
     right: 0;
     top: 140px;
-    display: block;
-    color: #F2EE9D;
-    box-sizing: border-box;
     width: 100%;
-    max-width: 600px; /* Adjust the value to set the maximum width */
-    margin: 0 auto; /* Center the container */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add a text shadow to make it stand out */
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px 40px;
+    color: #F2EE9D;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
     border-radius: 14px;
 }
 .quote-container h3 {
@@ -106,12 +105,14 @@ nav li a:hover {
     line-height: 1.7em;
     font-size: 22px;
 }
-/* Title of page */
+
+/* Now we do stylings that take effect across most or all pages */
 .topic-title {
     font-size: 40px;
     text-align: center;
 }
-/* the whole section of previews */
+
+/* applies to content such as in the home and impact pages */
 .previews-list {
     display: block;
     margin: 40px 80px 80px 100px;
@@ -132,8 +133,37 @@ nav li a:hover {
 	border: 3px solid #557a46;
     border-radius: 15px;
 }
-/* read more button */
-.read-more {
+
+/* each preview container has an image + a preview-text-container */
+.preview-container {
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #a0bc82;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 50px;
+}
+.preview-container:nth-child(2) {
+    background-color: #d1dec2;
+    flex-direction: row-reverse;
+}
+
+/* preview-text-container has a tagline (h4) and a short description (p) */
+.preview-text-container {
+    display: block;
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+    margin: 0px 50px;
+}
+.preview-container:nth-child(2) .preview-text-container {
+    text-align: right;
+}
+
+/* the read more button */
+.preview-text-container a {
     font-size: 20px;
     font-weight: bold;
     display: block;
@@ -149,44 +179,62 @@ nav li a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #226e7f;
 }
-
-.read-more:hover {
+.preview-text-container a:hover {
     color: #F2EE9D;
     background-color: #557a46;
     border: 3px solid rgb(195, 137, 21);
 }
 
-/* one preview container has an image + a preview-text-container */
-.preview-container {
+/* End of main content styling. Now we style the footer at the bottom */
+footer {
     box-sizing: border-box;
-    border-radius: 15px;
-    background-color: #a0bc82;
     display: flex;
     flex-direction: row;
-    align-items: center; /* Vertical centering */
-    padding: 0px 50px;
-}
-.preview-container:nth-child(2) {
-    background-color: #d1dec2;
-    flex-direction: row-reverse;
-}
-/* preview-text-container has a tagline (h4) and a short description (p) */
-.preview-text-container {
-    display: block;
-    box-sizing: border-box;
-    text-align: left;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 0;
     width: 100%;
-    max-width: 800px;
-    margin: 0px 50px;
+    background-color: #557a46;
 }
-.preview-container:nth-child(2) .preview-text-container {
-    text-align: right;
+footer p {
+    line-height: 1.4em;
 }
+footer a {
+    color: white;
+}
+footer a:hover {
+    color: #fcb437;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* End of footer styling. */ 
+
+/* Hide the mobile side menu when in large window sizes */
 .side-menu, .hamb {
-    display: none; /* Hide checkbox */
+    display: none;
 }
-/* For ipads and phones, use hamburger menu */
+
+/* RESPONSIVE DESIGN */
+/* Styling for ipad and smaller window sizes */
 @media screen and (max-width: 1000px) {
+    /* Main content */
+    .previews-list {
+        margin: 10px 10px 60px 10px;
+    }
+    .previews-list h4 {
+        font-size: 24px;
+    }
+    .previews-list p {
+        font-size: 18px;
+    }
+    .preview-container {
+        padding: 0px 20px;
+    }
+    .preview-text-container {
+        margin: 0px 24px;
+    }
+
+    /* Hamburger menu for navigation */
     .hamb{
         display: block;
         position: absolute;
@@ -196,7 +244,7 @@ nav li a:hover {
         padding-top: 10px;
         cursor: pointer;
     }
-    /* Hamburger icon lines */
+    /* hamburger icon's three lines */
     .hamb-lineA, .hamb-lineB, .hamb-lineC {
         background: #226e7f;
         display: block;
@@ -205,11 +253,13 @@ nav li a:hover {
         width: 40px;
         margin-bottom: 6px;
     }
-    /* Toggle menu icon */
+    /* allows us to mimick a toggle effect for the side menu. Makes it visible */
     .side-menu:checked ~ nav {
         display: block;
     }
-    /* make the middle bar of the hamburger invisible, turn the other two into an x */
+    /* make the middle bar of the hamburger invisible, 
+       and turn the other two bars into an X by making them diagonal. 
+       This creates the "close" icon when the side menu is open */
     .side-menu:checked ~ .hamb .hamb-lineB {
         background: transparent; 
     }
@@ -223,9 +273,11 @@ nav li a:hover {
         position: absolute;
         top: 12px;
     }
-    /* Upon clicking the hamburger menu icon, a vertical nav will appear */
+
+    /* For smaller windows, make a vertical nav bar by styling the original 
+       nav elements vertically */
     nav {
-        display: none;
+        display: none; /* side menu stays hidden unless hamburger is clicked */
         margin-right: 40px;
         margin-top: 220px;
         line-height: 2em;
@@ -236,21 +288,22 @@ nav li a:hover {
         margin-right: 0px;
     }
     nav li a {
-        font-size: 18px;
         display: block;
         padding: 8px 20px;
         border: 1px solid rgb(195, 137, 21);
+        background-color: rgb(254, 193, 87);
         border-radius: 0px;
         text-align: left;
-        background-color: rgb(254, 193, 87);
+        font-size: 18px;
     }
     nav li a:hover {
         color: #F2EE9D;
         background-color: #557a46;
     }
 }
-/* Minor responsive changes to make the transition to ipad and mobile view 
-less drastic */
+
+/* Minor responsive details to make the transition to smaller window sizes 
+   less drastic */
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
     .previews-list p {
         font-size: 20px;
@@ -261,33 +314,15 @@ less drastic */
         margin-right: 30px;
     }
 }
-/* For ipads and smaller */
-@media screen and (max-width: 1000px) {
-    /* Main content */
-    .previews-list {
-        margin: 10px 10px 60px 10px;
-    }
-    .previews-list h4 {
-        font-size: 24px;
-    }
-    .previews-list p {
-        font-size: 18px;
-        line-height: 1.5em;
-    }
-    .preview-container {
-        padding: 0px 20px;
-    }
-    .preview-text-container {
-        margin: 0px 24px;
-    }
-}
-/* For mobile */
+
+/* For mobile and smaller */
 @media screen and (max-width: 800px) {
-    /* banner */
+    /* home page banner */
     .quote-container h3 {
         line-height: 1.5em;
         font-size: 20px;
     }
+    /* title of pages */
     .topic-title {
         font-size: 32px;
     }
@@ -301,6 +336,8 @@ less drastic */
         padding-bottom: 40px;
         margin-bottom: 10px;
     }
+    /* For less distraction in tiny screens, we make the middle preview's 
+       background color consistent with the others */
     .preview-container:nth-child(2) {
         background-color: #a0bc82;
     }
@@ -309,8 +346,8 @@ less drastic */
         box-sizing: border-box;
         text-align: center;
         width: 100%;
+        max-width: 600px;
         margin: 0 auto;
-        padding: 0px 20px;
     }
     .preview-container:nth-child(2) .preview-text-container {
         text-align: center;
@@ -321,30 +358,15 @@ less drastic */
         border-radius: 5px;
         margin: 0 auto;
     }
-    .read-more {
+    .previews-list h4 {
+        font-size: 22px;
+    }
+    .previews-list p {
+        font-size: 17px;
+    }
+    /* the read more button */
+    .preview-text-container a {
         font-size: 18px;
         margin: 0 auto;
     }
-}
-
-footer {
-    box-sizing: border-box;
-    bottom: 0;
-    width: 100%;
-    background-color: #557a46;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-footer p {
-    line-height: 1.4em;
-}
-footer a {
-    color: white;
-}
-footer a:hover {
-    color: #fcb437;
-    box-sizing: border-box;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
